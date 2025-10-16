@@ -1,0 +1,259 @@
+/* RESET Y BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  background-image: radial-gradient(circle, #2f2767, #392e78, #43368a, #4e3d9c, #5945ae, #5f4fbb, #655ac9, #6b64d6, #6e73e1, #7282ea, #7791f3, #7e9ffc);
+  color: #fff;
+  line-height: 1.5;
+}
+
+h1, h2, nav ul li a {
+  font-family: 'Antonio', sans-serif;
+}
+
+/* ENCABEZADO */
+header {
+  background-color: #4f5bc7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 130px;
+  height: auto;
+}
+
+.logo h1 {
+  color: #FFB700;
+  font-size: 2em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: #FFB700;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background: #7d66b8;
+  top: 100%;
+  left: 0;
+  min-width: 150px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.submenu li a {
+  padding: 10px;
+  display: block;
+}
+
+nav ul li:hover .submenu,
+nav ul li:focus-within .submenu {
+  display: block;
+}
+
+/* SECCIÓN CONTACTO */
+#contacto {
+  background-color: #3d3572;
+  padding: 60px 30px;
+  margin: 60px auto;
+  max-width: 600px;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.perfil-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+
+
+
+/* TÍTULOS */
+#contacto h2 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  color: #FFB700;
+  text-align: center;
+}
+
+#contacto > p {
+  font-size: 1em;
+  margin-bottom: 40px;
+  color: #eeeeee;
+  text-align: center;
+}
+
+
+
+
+/* CONTENIDO PERFIL */
+.perfil-foto img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid #FFB700;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.perfil-campo {
+  background-color: #ffffff;
+  color: #333;
+  padding: 12px 18px;
+  width: 100%;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.perfil-campo label {
+  font-weight: 700;
+  font-size: 0.95em;
+  color: #222;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.perfil-campo span {
+  display: block;
+  font-size: 1em;
+}
+
+.perfil-mensaje {
+  margin-top: 15px;
+  font-style: italic;
+  font-size: 0.95em;
+  color: #FFB700;
+  text-align: center;
+}
+
+.perfil-mensaje a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* BOTÓN */
+.btn {
+  background-color: #4f5bc7;
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #FFB700;
+  color: #4f5bc7;
+  transform: translateY(-2px);
+}
+
+
+
+
+.carrito-btn {
+  margin-top: 10px;
+  background-color: #f6d789;
+  color: #3d3572;
+}
+
+.carrito-btn:hover {
+  background-color: #fff;
+  color: #4f5bc7;
+}
+
+/* PIE DE PÁGINA */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #4f5bc7;
+  color: white;
+  margin-top: 50px;
+}
+
+/* SESIÓN INICIADA */
+.menu li a.estrella {
+  font-size: 24px;
+  padding: 5px;
+}
+
+.estrella img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #FFB700;
+  transition: transform 0.2s ease;
+}
+
+.estrella img:hover {
+  transform: scale(1.1);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #4f5bc7;
+    color: rgb(255, 255, 255);
+    margin-top: auto;
+  }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contenedor-principal {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .perfil,
+  .carrito {
+    width: 100%;
+  }
+}

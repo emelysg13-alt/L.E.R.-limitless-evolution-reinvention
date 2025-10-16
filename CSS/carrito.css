@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  background-image: radial-gradient(circle, #2f2767, #392e78, #43368a, #4e3d9c, #5945ae, #5f4fbb, #655ac9, #6b64d6, #6e73e1, #7282ea, #7791f3, #7e9ffc);
+  color: #fff;
+  line-height: 1.5;
+}
+
+h1, h2, button, .logo h1, nav ul li a {
+  font-family: 'Antonio', sans-serif;
+}
+
+/* ENCABEZADO */
+header {
+    background-color: #4f5bc7;
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+
+.logo h1{
+  color: #FFB700;
+ }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+ nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s;
+  font-size: 18px; 
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: #FF9001;
+}
+
+ .submenu {
+    display: none;
+    position: absolute;
+    background: #7d66b8;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    border-radius: 5px;
+  }
+  
+  .submenu li a {
+    padding: 10px;
+    display: block;
+  }
+  
+  nav ul li:hover .submenu,
+  nav ul li:focus-within .submenu {
+    display: block;
+
+  }
+
+/* Icono perfil */
+nav ul li a.estrella img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #FFB700;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+nav ul li a.estrella img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+.contenido-principal {
+  flex: 1; /* ocupa todo el espacio disponible */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== CONTENEDOR DEL CARRITO ===== */
+.carrito-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color:  #483E8C;
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.carrito-container h1 {
+  color: #FFB700;
+  margin-bottom: 15px;
+}
+
+.carrito-container a {
+  color: #FF9001;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.carrito-container a:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.carrito-container hr {
+  border: 0;
+  border-top: 1px solid #6b64d6;
+  margin: 15px 0;
+}
+
+/* ===== TABLA ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color:  #31257f;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th, table td {
+  padding: 12px 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+table th {
+  background-color: #6c63ff;
+  color: #fff;
+  font-weight: 600;
+}
+
+table tr:nth-child(even) {
+  background-color: rgba(255,255,255,0.05);
+}
+
+table tr:hover {
+  background-color: rgba(255,255,255,0.15);
+}
+
+table a {
+  color: #FF9001;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+table a:hover {
+  text-decoration: underline;
+}
+
+/* ===== INPUTS Y BOTONES ===== */
+input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  background-color: rgba(255,255,255,0.9);
+  color: #000;
+}
+
+button {
+  padding: 5px 12px;
+  background-color: #FFB700;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  background-color: #FF9001;
+  transform: translateY(-2px);
+}
+
+/* ===== TOTAL ===== */
+.total {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #FFB700;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+/* FOOTER */
+ footer {
+    text-align: center;
+    padding: 20px;
+    background: #4f5bc7;
+    color: rgb(255, 255, 255);
+    margin-top: auto;
+  }

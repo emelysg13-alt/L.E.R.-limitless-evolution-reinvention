@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  background-image: radial-gradient(circle, #2f2767, #392e78, #43368a, #4e3d9c, #5945ae, #5f4fbb, #655ac9, #6b64d6, #6e73e1, #7282ea, #7791f3, #7e9ffc);
+  color: #fff;
+}
+
+h1, h2, nav a {
+  font-family: 'Antonio', sans-serif;
+}
+
+header {
+    background-color: #4f5bc7;
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+
+.logo h1{
+  color: #FFB700;
+ }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+ nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s;
+  font-size: 18px; 
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: #FF9001;
+}
+
+
+/* CONTENEDOR GENERAL */
+.contenedor {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* BLOQUES */
+.bloque {
+  background: #483E8C;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.bloque h2 {
+  color: #FF9001;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.bloque p {
+  color: #ddd;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* SECCIÓN VENTO */
+.empresa-vento {
+  text-align: center;
+}
+
+.vento-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-vento {
+  width: 180px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+/* BOTONES */
+.boton-final {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn {
+  background-color: #FF9001;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #FF9001;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #4f5bc7;
+    color: rgb(255, 255, 255);
+    margin-top: auto;
+  }
+
+
+
+.estrella img {
+  width: 40px; 
+  height: 40px;
+  border-radius: 50%; 
+  object-fit: cover;
+  border: 2px solid var(--primario);
+  transition: transform 0.2s ease;
+}
+
+.estrella img:hover {
+  transform: scale(1.1);
+}

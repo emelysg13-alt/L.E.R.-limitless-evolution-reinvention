@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loopy | Guía Digital de LER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Garamond:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles_loopy.css">
+  <link rel="icon" href="IMG/icon.png" type="image/x-icon">
+</head>
+<body>
+
+  <canvas id="canvas" class="snow"></canvas>
+
+  <!-- HEADER -->
+  <header>
+    <div class="center-content">
+      <div class="logo">
+        <img src="IMG/Logo.png" alt="Logo de LER - Empresa de innovación y deporte" />
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.php">Inicio</a></li>
+          <li><a href="CN.html">Contacta con L.E.R.</a></li>
+          <li><a href="index.php#proyectos">Proyectos</a></li>
+          <li><a id="toggle-btn" title="Activar modo oscuro">⭒˚.⋆☪˚.⋆</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+    <main class="contenedor">
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>L∞py <small><p>versión: alpha</p></small></h1>
+      <p class="subtitle">El compañero digital de LER</p>
+      <p style="text-align: center; font-size: 1.4em;" >
+        Hoy Loopy funciona como un chatbot de FAQ, pero es mucho más que eso: es la semilla de un asistente en evolución, que algún día crecerá hasta convertirse en IA  
+      </p>
+    </div>
+    <div class="hero-img">
+      <img src="IMG/Loopy.png" alt="Avatar de Loopy - Compañero digital" />
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <h2>¿Por qué el nombre "Loopy"?</h2>
+    
+
+    <p> <strong>Nombre:</strong> Loopy viene de la idea de <em>infinito</em> (∞) + <em>loop</em> (bucle), reflejando evolución constante.
+<br>
+<strong> Simbolismo:</strong> Un asistente que nunca deja de aprender y acompañar.
+<br>
+<strong> Identidad: </strong> Cercano, curioso y en constante cambio. </p>
+  </section>
+
+  <!-- IDENTITY SECTION -->
+  <section class="identity">
+    <h2>Identidad de Loopy</h2>
+    <div class="identity-cards">
+      <div class="card">
+         <h3>💡 Innovación</h3>
+        <p>Es símbolo del futuro tecnológico de LER.</p>
+      </div>
+      <div class="card">
+        <h3>💜 Conexión emocional</h3>
+        <p>Ayuda a crear un vínculo afectivo con el público, evocando emociones positivas</p>
+      </div>
+      <div class="card">
+        <h3>🤝 Humanización</h3>
+        <p>El primer colaborador digital de LER.</p>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- TIMELINE SECTION -->
+  <section class="timeline">
+    <h2>Línea de tiempo de Loopy</h2>
+    <div class="timeline-container">
+      <div class="timeline-item">
+        <span class="date">Etapa 1 (Alpha)</span>
+        <h3>FAQ básico (semilla)</h3>
+        <p>Nace como un sistema básico de preguntas y respuestas frecuentes.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="date">Etapa 2</span>
+        <h3>Asistente Virtual</h3>
+        <p>Mejora su interacción, ofreciendo acompañamiento más dinámico.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="date">Etapa 3</span>
+        <h3>Inteligencia Artificial</h3>
+        <p>Se convierte en un verdadero compañero digital, aprendiendo y evolucionando.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE SECTION -->
+  <section class="loopy-fun">
+    <h2>Habla con L∞py</h2>
+    <div class="loopy-display">
+      <img src="IMG/Loopy.png" alt="Loopy avatar" class="loopy-img">
+      <p id="loopy-phrase">Presiona el botón para recibir un dato curioso ✨</p>
+      <button onclick="getFrase()" id="phrase-btn">Escucha a Loopy</button>
+  <p id="frase"></p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 LER. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    function getFrase() {
+      fetch("frase.php") // pide la frase al servidor PHP
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("frase").innerText = data;
+        });
+    }
+  </script>
+
+</body>
+</html>

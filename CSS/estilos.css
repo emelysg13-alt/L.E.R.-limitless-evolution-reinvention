@@ -1,0 +1,273 @@
+/* estilos.css - CSS General para Paneles de Admin */
+/* Reset y base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin: 0;
+    color: #333;
+    line-height: 1.4;
+}
+
+h1, h2 {
+    color: #0077cc;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2em;
+    border-bottom: 2px solid #0077cc;
+    padding-bottom: 10px;
+}
+
+/* Forms generales */
+form {
+    background: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Inputs y textarea */
+input, textarea, select {
+    display: block;
+    width: 100%;
+    max-width: 400px; /* Límite para no estirar demasiado */
+    margin: 8px 0 15px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input[type="number"] {
+    width: 150px; /* Más estrecho para precios/números */
+}
+
+input[type="url"] {
+    max-width: 100%;
+}
+
+/* Validación nativa HTML5 */
+input:invalid, textarea:invalid {
+    border-color: #ff0000 !important;
+    background-color: #fff5f5;
+}
+
+input:valid, textarea:valid {
+    border-color: #28a745;
+    background-color: #f8fff8;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #0077cc;
+    box-shadow: 0 0 5px rgba(0,119,204,0.3);
+}
+
+/* Ayudas/instrucciones (small) */
+small.ayuda {
+    display: block;
+    font-size: 11px;
+    color: #666;
+    margin: 5px 0 15px 0;
+    font-style: italic;
+}
+
+small.ayuda:hover {
+    color: #0077cc;
+}
+
+/* Botones y enlaces de acción */
+button, .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+button:hover, .btn:hover {
+    background: #005aa3;
+}
+
+.cancelar, .btn-cancelar {
+    background: #6c757d;
+}
+
+.cancelar:hover, .btn-cancelar:hover {
+    background: #545b62;
+}
+
+.acciones a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.acciones a:first-child { /* Editar */
+    background: #28a745;
+}
+
+.acciones a:first-child:hover {
+    background: #218838;
+}
+
+.acciones a:last-child { /* Eliminar */
+    background: #dc3545;
+}
+
+.acciones a:last-child:hover {
+    background: #c82333;
+}
+
+/* Tablas generales */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #0077cc;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f0f8ff;
+}
+
+/* Imágenes en tablas (para admin.php) */
+table img {
+    width: 80px;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+/* Enlaces en tablas (ej: Ver producto) */
+table a:not(.acciones a) {
+    color: #0077cc;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background: #e7f3ff;
+}
+
+table a:not(.acciones a):hover {
+    background: #d1ecf1;
+    color: #0056b3;
+}
+
+/* Mensajes de error y éxito (de admin_users.php, pero general) */
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+    font-weight: bold;
+}
+
+.exito {
+    background: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+    font-weight: bold;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    form {
+        padding: 15px;
+    }
+    
+    input, textarea {
+        max-width: 100%;
+    }
+    
+    table {
+        font-size: 12px;
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+    }
+    
+    th, td {
+        padding: 8px 6px;
+        min-width: 100px; /* Evita columnas muy angostas */
+    }
+    
+    table img {
+        width: 50px;
+    }
+    
+    .acciones a {
+        display: block;
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* Clase para centrar elementos (opcional, para futuras expansiones) */
+.centrado {
+    text-align: center;
+    margin: 20px 0;
+}
+
+

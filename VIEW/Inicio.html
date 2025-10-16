@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L.E.R.</title>
+    <link rel="stylesheet" href="../ASSETS/CSS/inicio.css">
+    <link rel="icon" href="" type="image/png">
+</head>
+<body>
+
+        <div class="image-container">
+            <button class="button button-top" onclick="mostrarPopup()">Iniciar Sesión</button>
+            <a href="../VIEW/Registro.html" class="button button-bottom">Registrarse</a>
+            
+    </div>
+
+
+    <div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="cerrarPopup()">&times;</span>
+    <h2>¿Cómo deseas iniciar sesión?</h2>
+    <button onclick="location.href='../VIEW/Login.html'" class="popup-button">Cliente</button>
+    <button onclick="location.href='../VIEW/LoginAdmin.html'" class="popup-button">Administrador</button>
+  </div>
+</div>
+
+
+
+<script>
+  function mostrarPopup() {
+    document.getElementById("popup").style.display = "block";
+  }
+
+  function cerrarPopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+
+  // Cerrar el popup al hacer clic fuera del contenido
+  window.onclick = function(event) {
+    const popup = document.getElementById("popup");
+    if (event.target == popup) {
+      popup.style.display = "none";
+    }
+  }
+</script>
+
+
+    
+</body>
+</html>
